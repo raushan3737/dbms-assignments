@@ -8,17 +8,18 @@ VALUES
 -- Insert data into Customer table
 INSERT INTO Customer (Customer_ID, Customer_Name, Customer_Address)
 VALUES
-  (1, 'Akash', '123 Main Street'),
-  (2, 'Satwik', '456 Elm Avenue'),
-  (3, 'Rajan', '789 Oak Drive');
-
+  (1, 'Akash', '123 Patna'),
+  (2, 'Satwik', '456 Delhi'),
+  (3, 'Rajan', '789 Hyderabad'),
+  (4,'Kunal', '512 Barreli');
+  
 -- Insert data into Ticket table
 INSERT INTO Ticket (Ticket_ID, Ticket_Type, Customer_ID, Train_ID)
 VALUES
   (1, 'Reserved', 1, 1),
   (2, 'Reserved', 2, 2),
   (3, 'Unreserved', 3, 1),
-  (4, 'Unreserved', 1, 3);
+  (4, 'Unreserved', 4, 3);
 
 -- Insert  data into Reserved Ticket table
 INSERT INTO Reserved_Ticket (Ticket_ID)
