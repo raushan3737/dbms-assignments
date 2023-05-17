@@ -1,0 +1,53 @@
+Problem Statement: Design a database schema for a hotel booking agency using the E-R model and design tables accordingly using the relationship model. The necessary information is given below :
+
+Entities : Hotel, Customer
+Customer can be first time user or loyal customer.
+Customer can book from only only hotel at a time. A hotel can have many customers.
+
+Assume columns accordingly and mention primary keys, weak and strong entities.
+
+Solution: 
+Based on the given information, we can design a database schema for a hotel booking agency using the Entity-Relationship (E-R) model. 
+
+
+Based on the given information, we can design a database schema for a hotel booking agency using the Entity-Relationship (E-R) model.
+
+Step1: Find all entities & thier relationship
+
+Entities: Hotel, Customer
+
+Relationships: Hotel Booking
+
+Primary keys are denoted with an asterisk (*), and foreign keys are denoted with a caret (^). Weak entities are indicated within square brackets [].
+
+Hotel(Hotel_ID(PK), Hotel_Name, Location)
+
+Customer(Customer_ID(PK), Customer_Name, Customer_Address)
+
+First Time Customer
+
+Loyal Customer(*Customer_ID(FK))
+
+Hotel Booking(Booking_ID(PK), Customer_ID(FK), Hotel_ID(FK), Check_in_Date, Check_out_Date)
+
+
+The "Hotel" entity represents information about each hotel, including its unique ID, name, location, and any other relevant attributes.
+
+The "Customer" entity stores information about customers, including their unique ID, name, address, and other relevant details.
+
+The "First Time Customer" entity represents customers who are booking for the first time.
+
+It is represented as a weak entity since it depends on the "Customer" entity.
+
+The "Loyal Customer" entity represents customers who have booked with the hotel agency before. It is also represented as a weak entity since it depends on the "Customer" entity.
+
+
+The "Hotel Booking" relationship indicates that a customer can make a booking with a specific hotel. It includes a unique booking ID, customer ID, hotel ID, check-in date, check-out date, and any other relevant attributes.
+
+The "Hotel Booking" entity references both the "Customer" and "Hotel" entities through their respective IDs.
+
+This database schema allows for the storage of information related to hotels, customers, and hotel bookings.
+
+It ensures that a customer can book only one hotel at a time and that a hotel can have many customers.
+
+It distinguishes between first-time customers and loyal customers and maintains the relationships between the entities.
