@@ -1,0 +1,1 @@
+-- A github repository where all the assignment solution is present related to DBMS Course
